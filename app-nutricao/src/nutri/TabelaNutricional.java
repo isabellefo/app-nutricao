@@ -26,11 +26,11 @@ public class TabelaNutricional {
 	public void setCarboidratos(double carboidratos) {
 		this.carboidratos = carboidratos;
 	}
-	public double getProteínas() {
+	public double getProteinas() {
 		return proteinas;
 	}
-	public void setProteínas(double proteínas) {
-		this.proteinas = proteínas;
+	public void setProteinas(double proteinas) {
+		this.proteinas = proteinas;
 	}
 	public double getGordurasTotais() {
 		return gordurasTotais;
