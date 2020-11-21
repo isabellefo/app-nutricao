@@ -8,7 +8,7 @@ import nutri.Grupo;
 import nutri.TabelaNutricional;
 
 public class CadastroAlimento {
-	static CadastroTabela cadastrotabela = new CadastroTabela();
+	private CadastroTabela cadastrotabela = new CadastroTabela();
 	private Controlador ctrl = new Controlador();
 	
 	public CadastroAlimento() {

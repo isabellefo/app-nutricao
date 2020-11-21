@@ -5,9 +5,8 @@ import nutri.TabelaNutricional;
 
 public class CadastroTabela {
 	
-	private Controlador ctrl = new Controlador();
-	
-	
+	private Controlador ctrl;
+
 	public CadastroTabela() {
 		this.ctrl = Controlador.obterControlador();
 	}
@@ -20,8 +19,17 @@ public class CadastroTabela {
 		double fibraAlimentar = ctrl.lerDouble("Fibra Alimentar: ");
 		double sodio = ctrl.lerDouble("Sodio: ");
 		
-		TabelaNutricional tabelaNutri = new TabelaNutricional(carboidratos, proteinas,gordurasTotais,gordurasSaturadas,fibraAlimentar,sodio);
-		return tabelaNutri;
+		TabelaNutricional tabelaNutri =
+			new TabelaNutricional(
+				carboidratos,
+				proteinas,
+				gordurasTotais,
+				gordurasSaturadas,
+				fibraAlimentar,
+				sodio
+			);
+
+			return tabelaNutri;
 	}
 
 }
