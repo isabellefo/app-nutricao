@@ -4,12 +4,12 @@ public enum Grupo {
 
 	G1 {
 		public String toString() {
-			return "Alimentos ricos em proteínas";
+			return "Leite e derivados(com exceção da manteiga e da nata)";
 		}
 	},
 	G2 {
 		public String toString() {
-			return "Alimentos ricos em proteínas, ferro, zinco e vitaminas B, B2 e B3";
+			return "Carne, aves, peixes, embutidos, miúdos, ovos e leguminosas secas " ;
 		}
 	},
 	G3 {
