@@ -13,10 +13,11 @@ public class App {
 	static CadastroAlimento cadastro = new CadastroAlimento();
 	
 	public static void main(String[] args) {
+
 		cadastro.cadastrarAlimento(alimento);
 		for (Alimento a : alimento) {
-			System.out.println(a.getNome());
-			System.out.println(a.getGrupo());
+			System.out.println(a.toString());
+			System.out.println(a.getTabela().toString());
 		}
 	}
 

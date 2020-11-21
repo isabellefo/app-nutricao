@@ -58,7 +58,6 @@ public class Controlador {
 	
 	public double lerDouble(String msg) {
 		double x = -1;
-
 			System.out.print(msg);
 			String entrada = scan.nextLine().trim();
 			try {
@@ -68,6 +67,19 @@ public class Controlador {
 			}
 		
 		return x;
+	}
+	
+	public String lerDoubleString(String msg) {
+		double x = -1;
+			System.out.print(msg);
+			String entrada = scan.nextLine().trim();
+			try {
+				x = Double.parseDouble(entrada);
+			} catch(Exception e) {
+				System.out.println("Por favor insira um numero");
+			}
+		
+		return x+"";
 	}
 	
 

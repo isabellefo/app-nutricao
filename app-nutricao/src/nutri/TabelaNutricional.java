@@ -1,0 +1,69 @@
+package nutri;
+
+public class TabelaNutricional {
+	
+	private double carboidratos;
+	private double proteinas;
+	private double gordurasTotais;
+	private double gordurasSaturadas;
+	private double fibraAlimentar;
+	private double sodio;
+	
+	public TabelaNutricional(double carboidratos, double proteinas, double gordurasTotais, double gordurasSaturadas,
+			double fibraAlimentar, double sodio) {
+		super();
+		this.carboidratos = carboidratos;
+		this.proteinas = proteinas;
+		this.gordurasTotais = gordurasTotais;
+		this.gordurasSaturadas = gordurasSaturadas;
+		this.fibraAlimentar = fibraAlimentar;
+		this.sodio = sodio;
+	}
+
+	public double getCarboidratos() {
+		return carboidratos;
+	}
+	public void setCarboidratos(double carboidratos) {
+		this.carboidratos = carboidratos;
+	}
+	public double getProteínas() {
+		return proteinas;
+	}
+	public void setProteínas(double proteínas) {
+		this.proteinas = proteínas;
+	}
+	public double getGordurasTotais() {
+		return gordurasTotais;
+	}
+	public void setGordurasTotais(double gordurasTotais) {
+		this.gordurasTotais = gordurasTotais;
+	}
+	public double getGordurasSaturadas() {
+		return gordurasSaturadas;
+	}
+	public void setGordurasSaturadas(double gordurasSaturadas) {
+		this.gordurasSaturadas = gordurasSaturadas;
+	}
+	public double getFibraAlimentar() {
+		return fibraAlimentar;
+	}
+	public void setFibraAlimentar(double fibraAlimentar) {
+		this.fibraAlimentar = fibraAlimentar;
+	}
+	public double getSodio() {
+		return sodio;
+	}
+	public void setSodio(double sodio) {
+		this.sodio = sodio;
+	}
+	
+	public String toString() {
+		return "Carboidratos:"+carboidratos + " g" + "\n" +
+		"Proteinas:"+proteinas + " g" + "\n" +	
+		"Gorduras Totais:"+gordurasTotais + " g" + "\n" +
+		"Gorduras Saturadas:"+gordurasSaturadas + " g" + "\n" +
+		"Fibra Alimentar:"+fibraAlimentar + " g" + "\n" +
+		"Sodio:"+sodio + " mg" + "\n";
+	}
+
+}
