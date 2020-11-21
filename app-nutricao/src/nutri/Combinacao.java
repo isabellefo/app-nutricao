@@ -1,22 +1,27 @@
 package nutri;
 
+import java.util.Arrays;
 import java.util.List;
 
-public class Combinacao {
+public class Combinacao{
+	private List<Alimento>alimentos;
 	
-	private String nome;
-	private List<Alimento>alimento;
+	public Combinacao(Alimento ...alimentos) {
+		this.alimentos = Arrays.asList(alimentos);
+	}
+	private String nomeCombinacao;
+	
 	public String getNome() {
-		return nome;
+		return nomeCombinacao;
 	}
 	public void setNome(String nome) {
-		this.nome = nome;
+		this.nomeCombinacao = nome;
 	}
 	public List<Alimento> getAlimento() {
-		return alimento;
+		return alimentos;
 	}
 	public void setAlimento(List<Alimento> alimento) {
-		this.alimento = alimento;
+		this.alimentos = alimento;
 	}
 
 }

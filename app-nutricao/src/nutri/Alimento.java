@@ -2,8 +2,13 @@ package nutri;
 
 public class Alimento {
 	
-	private String nome;
-	private String grupo;
+	protected String nome;
+	protected Grupo grupo;
+	
+	public Alimento(String nome, Grupo grupo) {
+		this.nome = nome;
+		this.grupo = grupo;
+	}
 	
 	public String getNome() {
 		return nome;
@@ -11,10 +16,10 @@ public class Alimento {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getGrupo() {
+	public Grupo getGrupo() {
 		return grupo;
 	}
-	public void setGrupo(String grupo) {
+	public void setGrupo(Grupo grupo) {
 		this.grupo = grupo;
 	}
 
