@@ -6,7 +6,7 @@ import nutri.TabelaNutricionalBuilder;
 
 public class CadastroTabela extends Cadastro<TabelaNutricional> {
 	
-	private Controlador ctrl = new Controlador();
+	private Controlador ctrl = Controlador.obterControlador();
 	private TabelaNutricionalBuilder tabelaBuilder;
 	
 	public CadastroTabela() {

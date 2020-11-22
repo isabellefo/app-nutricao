@@ -9,7 +9,6 @@ import nutri.TabelaNutricional;
 
 public class CadastroAlimento extends Cadastro<Alimento> {
 	static CadastroTabela cadastrotabela = new CadastroTabela();
-	
 	private Controlador ctrl = new Controlador();
 	private List<Alimento> alimentos;
 	

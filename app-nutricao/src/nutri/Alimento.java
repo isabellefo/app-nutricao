@@ -39,7 +39,7 @@ public class Alimento implements Ingrediente {
 	
 	public String toString() {
 		return "Nome:"+nome+"\n"+
-				"Grupo de alimento:"+grupo+ "\n";
+				"  Grupo de alimento:"+grupo+ "\n";
 	}
 
 }
