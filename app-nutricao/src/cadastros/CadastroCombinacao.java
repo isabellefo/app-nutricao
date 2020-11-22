@@ -18,7 +18,7 @@ public class CadastroCombinacao extends Cadastro<Combinacao> {
 	private Alimento escolherIngrediente() {
 		String[] opcoes =  new String[] {
 				"Escolher Alimento",
-				"Fim."
+				"Fim"
 		};
 		String opcao = ctrl.lerOpcao("", opcoes);
 		if ("Fim".equals(opcao)) {
