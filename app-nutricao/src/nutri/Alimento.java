@@ -12,6 +12,10 @@ public class Alimento implements Ingrediente {
 		this.grupo = grupo;
 		this.tabela = tabela;
 	}
+	
+	public Alimento(String nome) {
+		this.nome = nome;
+	}
 
 	public TabelaNutricional getTabela() {
 		return tabela;

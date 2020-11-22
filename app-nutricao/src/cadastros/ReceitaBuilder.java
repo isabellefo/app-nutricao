@@ -4,16 +4,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 import nutri.Alimento;
+import nutri.Ingrediente;
 import nutri.Receita;
 
 public class ReceitaBuilder {
   
   private Receita receita;
-  private Map<Alimento, Integer> ingredientes;
+  private Map<Ingrediente, Integer> ingredientes;
 
   public ReceitaBuilder() {
     receita = new Receita();
-    ingredientes = new HashMap<Alimento, Integer>();
+    ingredientes = new HashMap<Ingrediente, Integer>();
   }
 
   public ReceitaBuilder nome(String nome) {
@@ -21,7 +22,7 @@ public class ReceitaBuilder {
     return this;
   }
 
-  public ReceitaBuilder ingrediente(Alimento ingrediente, int quantidade) {
+  public ReceitaBuilder ingrediente(Ingrediente ingrediente, int quantidade) {
     if(ingredientes.containsKey(ingrediente))
       quantidade += ingredientes.get(ingrediente);
 
@@ -42,7 +43,7 @@ public class ReceitaBuilder {
 
   public ReceitaBuilder resetar() {
     receita = new Receita();
-    ingredientes = new HashMap<Alimento, Integer>();
+    ingredientes = new HashMap<Ingrediente, Integer>();
     return this;
   }
 

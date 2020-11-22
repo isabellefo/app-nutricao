@@ -3,7 +3,7 @@ package cadastros;
 import controle.Controlador;
 
 public abstract class Cadastro<T> {
-	protected Controlador ctrl = new Controlador();
+	protected Controlador ctrl = Controlador.obterControlador();
 	
 	protected Cadastro() {
 		this.ctrl = Controlador.obterControlador();

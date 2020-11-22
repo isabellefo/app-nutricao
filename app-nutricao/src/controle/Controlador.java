@@ -3,10 +3,11 @@ package controle;
 import java.util.Scanner;
 
 public class Controlador {
+	private static Controlador ctrl = null;
+
 	private Scanner scan;
-	static Controlador ctrl = null;
 	
-	public Controlador() {
+	private Controlador() {
 		this.scan = new Scanner(System.in);
 	}
 	
