@@ -1,6 +1,6 @@
 package nutri;
 
-public class Alimento {
+public class Alimento implements Ingrediente {
 	
 	protected String nome;
 	protected Grupo grupo;
@@ -24,12 +24,15 @@ public class Alimento {
 	public String getNome() {
 		return nome;
 	}
+	
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
 	public Grupo getGrupo() {
 		return grupo;
 	}
+	
 	public void setGrupo(Grupo grupo) {
 		this.grupo = grupo;
 	}

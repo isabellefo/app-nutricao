@@ -1,21 +1,18 @@
 package menu;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import cadastros.CadastroAlimento;
+import database.Database;
 import nutri.Alimento;
 
 public class App {
 
-	//Apenas teste, pode apagar depois
-	static List<Alimento> alimento = new ArrayList<Alimento>();
-	static CadastroAlimento cadastro = new CadastroAlimento();
+	static Database db = Database.getDatabase();
+	static CadastroAlimento cadastro = new CadastroAlimento(db.getAlimentos());
 	
 	public static void main(String[] args) {
 
-		cadastro.cadastrarAlimento(alimento);
-		for (Alimento a : alimento) {
+		cadastro.cadastrar();
+		for (Alimento a : db.getAlimentos()) {
 			System.out.println(a.toString());
 			System.out.println(a.getTabela().toString());
 		}

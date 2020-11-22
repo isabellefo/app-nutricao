@@ -2,17 +2,19 @@ package cadastros;
 
 import controle.Controlador;
 import nutri.TabelaNutricional;
+import nutri.TabelaNutricionalBuilder;
 
-public class CadastroTabela {
+public class CadastroTabela extends Cadastro<TabelaNutricional> {
 	
 	private Controlador ctrl = new Controlador();
-	
+	private TabelaNutricionalBuilder tabelaBuilder;
 	
 	public CadastroTabela() {
-		this.ctrl = Controlador.obterControlador();
+		super();
+		this.tabelaBuilder = new TabelaNutricionalBuilder();
 	}
 	
-	public TabelaNutricional cadastrarTabela() {
+	public TabelaNutricional cadastrar() {
 		double carboidratos = ctrl.lerDouble("Carboidratos: ");
 		double proteinas = ctrl.lerDouble("Proteinas: ");
 		double gordurasTotais = ctrl.lerDouble("Gorduras Totais: ");
@@ -20,8 +22,14 @@ public class CadastroTabela {
 		double fibraAlimentar = ctrl.lerDouble("Fibra Alimentar: ");
 		double sodio = ctrl.lerDouble("Sodio: ");
 		
-		TabelaNutricional tabelaNutri = new TabelaNutricional(carboidratos, proteinas,gordurasTotais,gordurasSaturadas,fibraAlimentar,sodio);
-		return tabelaNutri;
+		return tabelaBuilder
+				.setCarboidratos(carboidratos)
+				.setProteinas(proteinas)
+				.setGordurasTotais(gordurasTotais)
+				.setGordurasSaturadas(gordurasSaturadas)
+				.setFibraAlimentar(fibraAlimentar)
+				.setSodio(sodio)
+				.getTabela();
 	}
 
 }
