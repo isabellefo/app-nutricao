@@ -13,6 +13,10 @@ public class Alimento {
 		this.tabela = tabela;
 	}
 
+	public Alimento(String nome) {
+		this(nome, null, null);
+	}
+
 	public TabelaNutricional getTabela() {
 		return tabela;
 	}
