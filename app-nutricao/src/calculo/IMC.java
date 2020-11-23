@@ -1,15 +1,21 @@
 package calculo;
 
+import controle.Controlador;
+import java.text.DecimalFormat; 
+
 public class IMC {
 	
-	public double calculaImc(){
+	public void calculaImc(){
+		Controlador ctrl = new Controlador();
 		
-		double altura = 0;
-		double peso = 0;
+		 
+		DecimalFormat df = new DecimalFormat("####.00");
+		double altura = ctrl.lerDouble("Altura para o calculo: ");
+		double peso = ctrl.lerDouble("Peso para o calculo: ");;
 		
 		double indice = peso / (altura*altura);
 		
-		return indice;
+		System.out.println("Indice de massa corporal = " + df.format(indice));
 	}
 
 }
