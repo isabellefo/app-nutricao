@@ -45,19 +45,17 @@ public static void main(String[] args) {
 				opsub = controle.LerOpcaoMenu();
 				
 				switch (opsub) {
-				
 					case 1:
-						//ListarAlimento
+						//Listar alimento 
 						break;
 					case 2:
-						//ListarCombinacao
+						//Listar combinações
 						break;
 					case 3:
-						//ListarReceita
+						//Listar receitas
 						break;
 					case 4:
 						menu.ShowMenu();
-				
 				}
 				
 				break;

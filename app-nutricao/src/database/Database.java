@@ -32,19 +32,21 @@ public class Database {
 	}
 	
 	public Alimento[]  getAlimentosArray() {
-		System.out.println(alimentos.size());
-		System.out.println(alimentos);
 		Alimento[] alimentos = new Alimento[this.alimentos.size()];
 		alimentos = this.alimentos.toArray(alimentos);
 		return alimentos;
 	}
 	
 	public Combinacao[]  getCombinacaoArray() {
-		System.out.println(alimentos.size());
-		System.out.println(alimentos);
 		var combinacoes = new Combinacao[this.combinacoes.size()];
 		combinacoes = this.combinacoes.toArray(combinacoes);
 		return combinacoes;
+	}
+	
+	public Receita[]  getReceitaArray() {
+		var receitas = new Receita[this.receitas.size()];
+		receitas = this.receitas.toArray(receitas);
+		return receitas;
 	}
 	
 	public Ingrediente[] getIngredientesArray() {
