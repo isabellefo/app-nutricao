@@ -8,11 +8,14 @@ import nutri.Combinacao;
 
 public class CadastroCombinacao extends Cadastro<Combinacao> {
 	private List<Combinacao> combinacoes;
-	private Alimento[] alimentos = Database.getDatabase().getAlimentosArray();
 	
 	public CadastroCombinacao() {
 		super();
 		this.combinacoes = Database.getDatabase().getCombinacoes();
+	}
+	
+	private Alimento[] getAlimentos() {
+		return Database.getDatabase().getAlimentosArray();
 	}
 	
 	private Alimento escolherIngrediente() {
@@ -25,7 +28,7 @@ public class CadastroCombinacao extends Cadastro<Combinacao> {
 			return null;
 		}
 		
-		return ctrl.lerOpcao("Escolha um alimento: ", alimentos);
+		return ctrl.lerOpcao("Escolha um alimento: ", getAlimentos());
 	}
 	
 	@Override

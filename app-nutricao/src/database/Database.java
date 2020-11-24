@@ -33,6 +33,8 @@ public class Database {
 	}
 	
 	public Alimento[]  getAlimentosArray() {
+		System.out.println(alimentos.size());
+		System.out.println(alimentos);
 		Alimento[] alimentos = new Alimento[this.alimentos.size()];
 		alimentos = this.alimentos.toArray(alimentos);
 		return alimentos;
