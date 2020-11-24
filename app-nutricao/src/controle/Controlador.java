@@ -7,7 +7,7 @@ public class Controlador {
 
 	private Scanner scan;
 	
-	private Controlador() {
+	public Controlador() {
 		this.scan = new Scanner(System.in);
 	}
 	
@@ -81,6 +81,11 @@ public class Controlador {
 			}
 		
 		return x+"";
+	}
+	
+	public int LerOpcaoMenu() {
+		int op = scan.nextInt();
+		return op;
 	}
 	
 
