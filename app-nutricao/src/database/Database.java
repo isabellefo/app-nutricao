@@ -40,8 +40,6 @@ public class Database {
 	}
 	
 	public Combinacao[]  getCombinacaoArray() {
-		System.out.println(alimentos.size());
-		System.out.println(alimentos);
 		var combinacoes = new Combinacao[this.combinacoes.size()];
 		combinacoes = this.combinacoes.toArray(combinacoes);
 		return combinacoes;
