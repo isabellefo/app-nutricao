@@ -4,8 +4,6 @@ import cadastros.CadastroAlimento;
 import cadastros.CadastroCombinacao;
 import cadastros.CadastroReceita;
 import database.Database;
-
-import controle.Controlador;
 import calculo.IMC;
 
 
