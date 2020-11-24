@@ -1,11 +1,7 @@
-package cadastros;
+package nutri;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import nutri.Alimento;
-import nutri.Ingrediente;
-import nutri.Receita;
 
 public class ReceitaBuilder {
   

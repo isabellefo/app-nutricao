@@ -3,10 +3,8 @@ package menu;
 
 import cadastros.CadastroAlimento;
 import database.Database;
-
-import cadastros.ReceitaBuilder;
-
 import nutri.Alimento;
+import nutri.ReceitaBuilder;
 
 public class App {
 
