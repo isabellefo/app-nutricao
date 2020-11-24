@@ -2,9 +2,9 @@ package database;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import nutri.Alimento;
 import nutri.Combinacao;
+import nutri.Ingrediente;
 import nutri.Receita;
 
 public class Database {
@@ -20,7 +20,6 @@ public class Database {
 		this.combinacoes = new ArrayList<Combinacao>();
 	}
 	
-
 	public static Database getDatabase() {
 		if(db == null) {
 			db = new Database();
@@ -39,7 +38,29 @@ public class Database {
 		alimentos = this.alimentos.toArray(alimentos);
 		return alimentos;
 	}
-
+	
+	public Combinacao[]  getCombinacaoArray() {
+		System.out.println(alimentos.size());
+		System.out.println(alimentos);
+		var combinacoes = new Combinacao[this.combinacoes.size()];
+		combinacoes = this.combinacoes.toArray(combinacoes);
+		return combinacoes;
+	}
+	
+	public Ingrediente[] getIngredientesArray() {
+		var comb = getCombinacaoArray();
+		var ali = getAlimentosArray();
+		var res = new Ingrediente[comb.length + ali.length];
+		var pos = 0;
+		for(Ingrediente i : comb) {
+			res[pos++] = i;
+		}
+		for(Ingrediente i : ali) {
+			res[pos++] = i;
+		}
+		return res;
+	}
+	
 	public List<Receita> getReceitas() {
 		return receitas;
 	}
