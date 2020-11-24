@@ -43,12 +43,4 @@ public class ReceitaBuilder {
     return this;
   }
 
-  public Receita obterReceita() {
-    receita.setIngredientes(ingredientes);
-    var receita_final = receita;
-    this.resetar();
-
-    return receita_final;
-  }
-
 }
