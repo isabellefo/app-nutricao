@@ -1,46 +1,39 @@
 package menu;
 
-import cadastros.ReceitaBuilder;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import nutri.Alimento;
+import nutri.Grupo;
+import nutri.TabelaNutricional;
+import permanencia.ExportadorArquivo;
+import permanencia.LeitorArquivo;
 
 public class App {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 
-		var receita_builder = new ReceitaBuilder();
-
-		var cenoura = new Alimento("Cenoura");
-
-		var receita = receita_builder
-			.nome("Bolo de Cenoura")
-			.ingrediente(cenoura, 1)
-			.ingrediente(cenoura, 1)
-			.ingrediente(cenoura, 1)
-			.ingrediente(new Alimento("Ovo"), 4)
-			.ingrediente(new Alimento("Óleo"), 180) // ml
-			.ingrediente(new Alimento("Açúcar"), 360) // g
-			.ingrediente(new Alimento("Fermento em pó"), 20) // g
-			.ingrediente(new Alimento("Leite Condensado"), 395) // g
-			.ingrediente(new Alimento("Manteiga"), 20) // g
-			.ingrediente(new Alimento("Chocolate em pó"), 180) // g
-			.ingrediente(new Alimento("Chocolate granulado"), 180) // g
-			.tempoPreparo("40 minutos")
-			.modoPreparo(
-				"Massa:\n" +
-				"1  Retire a casca das cenouras, corte-as em pedaços, lave-as e cozinhe-as cobertas com\n" +
-				"   água. Escorra a água, e deixe que as cenouras esfriem um pouco.\n" +
-				"2  Em um liquidificador, bata as cenouras cozidas, os ovos e o óleo.\n" +
-				"3  Despeje a mistura em um recipiente e misture o açúcar e a farinha de trigo peneirada\n" +
-				"   com o fermento.\n" +
-				"4  Coloque em uma fôrma retangular (20 x 30 cm) untada, e leve ao forno médio (180°C),\n" +
-				"   preaquecido, por 40 minutos. Enquanto isso, prepare a cobertura de brigadeiro.\n" +
-				"Cobertura:\n" +
-				"5  Em uma panela coloque o Leite MOÇA®, o Chocolate em Pó DOIS FRADES e a manteiga e leve\n" +
-				"   ao fogo baixo, mexendo sempre, até começar a desprender da panela.\n" +
-				"6  Despeje ainda quente sobre o bolo, distribua o chocolate granulado e deixe esfriar.\n")
-			.obterReceita();
-
-		System.out.println(receita);
+		/*
+		
+		var tabela = new TabelaNutricional(1, 2, 3,	4, 5,	6);
+		
+		List<Alimento> a = new ArrayList<>();
+		a.add(new Alimento("Teste", Grupo.G1, tabela));
+		a.add(new Alimento("Outro Alimento", Grupo.G2, tabela));
+		a.add(new Alimento("Cenoura", Grupo.G3, tabela));
+		
+		var exportador = new ExportadorArquivo("alimentos.json");
+		exportador.exportarDe(a);
+		
+		*/
+		
+		var alimentos = new ArrayList<Alimento>();
+		var leitor = new LeitorArquivo<Alimento>("alimentos.json", Alimento[].class);
+		leitor.importarPara(alimentos);
+		
+		alimentos.forEach(a -> System.out.println(a.getDescricao()));
+		
 	}
 
 }

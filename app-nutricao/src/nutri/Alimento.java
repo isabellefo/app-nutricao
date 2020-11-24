@@ -1,12 +1,15 @@
 package nutri;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Alimento {
 	
 	protected String nome;
 	protected Grupo grupo;
+
+	@SerializedName("tabela_nutricional")
 	protected TabelaNutricional tabela; 
 
-	
 	public Alimento(String nome, Grupo grupo, TabelaNutricional tabela) {
 		this.nome = nome;
 		this.grupo = grupo;
@@ -38,9 +41,16 @@ public class Alimento {
 		this.grupo = grupo;
 	}
 	
+	@Override
 	public String toString() {
-		return "Nome:"+nome+"\n"+
-				"Grupo de alimento:"+grupo+ "\n";
+		return nome;
+	}
+
+	public String getDescricao() {
+		return
+			"Nome: "  + nome  + "\n" +
+			"Grupo: " + grupo + "\n" +
+			"Tabela nutricional:\n" + tabela;
 	}
 
 }

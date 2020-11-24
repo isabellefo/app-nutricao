@@ -1,0 +1,38 @@
+[
+  {
+    "nome": "Teste",
+    "grupo": "G1",
+    "tabela_nutricional": {
+      "carboidratos": 1.0,
+      "proteinas": 2.0,
+      "sodio": 6.0,
+      "gorduras_totais": 3.0,
+      "gorduras_saturadas": 4.0,
+      "fibra_alimentar": 5.0
+    }
+  },
+  {
+    "nome": "Outro Alimento",
+    "grupo": "G2",
+    "tabela_nutricional": {
+      "carboidratos": 1.0,
+      "proteinas": 2.0,
+      "sodio": 6.0,
+      "gorduras_totais": 3.0,
+      "gorduras_saturadas": 4.0,
+      "fibra_alimentar": 5.0
+    }
+  },
+  {
+    "nome": "Cenoura",
+    "grupo": "G3",
+    "tabela_nutricional": {
+      "carboidratos": 1.0,
+      "proteinas": 2.0,
+      "sodio": 6.0,
+      "gorduras_totais": 3.0,
+      "gorduras_saturadas": 4.0,
+      "fibra_alimentar": 5.0
+    }
+  }
+]
