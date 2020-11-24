@@ -36,6 +36,7 @@ public class Menu {
 	public boolean sair(int op) {
 		return op == 6;
 	}
+	
 	public void run () {
 		int op = 0;
 		int opsub = 0;

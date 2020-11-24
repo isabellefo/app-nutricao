@@ -66,21 +66,21 @@ public class Database {
 	}
 	
 	public void printAlimentos() {
-		int i = 0;
+		int i = 1;
 		for(var alimento : alimentos) {
 			System.out.println( i++ +". " + alimento);
 		}
 	}
 	
 	public void printCombinacoes() {
-		int i = 0;
+		int i = 1;
 		for(var combinacao : combinacoes) {
 			System.out.println( i++ +". " + combinacao);
 		}
 	}
 	
 	public void printReceitas() {
-		int i = 0;
+		int i = 1;
 		for(var receita : receitas) {
 			System.out.println( i++ +". " + receita + System.lineSeparator());
 		}
