@@ -43,5 +43,8 @@ public class Combinacao  implements Ingrediente {
 	public void addAlimento(Alimento alimento) {
 		this.alimentos.add(alimento);
 	}
-
+	
+	public String toString( ) {
+		return nomeCombinacao;
+	}
 }
