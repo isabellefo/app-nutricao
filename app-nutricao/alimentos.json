@@ -34,5 +34,17 @@
       "gorduras_saturadas": 4.0,
       "fibra_alimentar": 5.0
     }
+  },
+    {
+    "nome": "Ultimo",
+    "grupo": "G4",
+    "tabela_nutricional": {
+      "carboidratos": 4.0,
+      "proteinas": 1.0,
+      "sodio": 6.0,
+      "gorduras_totais": 13.0,
+      "gorduras_saturadas": 4.0,
+      "fibra_alimentar": 5.0
+    }
   }
 ]
