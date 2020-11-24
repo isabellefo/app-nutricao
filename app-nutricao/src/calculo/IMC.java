@@ -6,7 +6,7 @@ import java.text.DecimalFormat;
 public class IMC {
 	
 	public void calculaImc(){
-		Controlador ctrl = new Controlador();
+		Controlador ctrl = Controlador.obterControlador();
 		
 		 
 		DecimalFormat df = new DecimalFormat("####.00");

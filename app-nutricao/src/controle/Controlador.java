@@ -82,11 +82,5 @@ public class Controlador {
 		
 		return x+"";
 	}
-	
-	public int LerOpcaoMenu() {
-		int op = scan.nextInt();
-		return op;
-	}
-	
 
 }

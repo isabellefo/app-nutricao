@@ -32,8 +32,6 @@ public class Database {
 	}
 	
 	public Alimento[]  getAlimentosArray() {
-		System.out.println(alimentos.size());
-		System.out.println(alimentos);
 		Alimento[] alimentos = new Alimento[this.alimentos.size()];
 		alimentos = this.alimentos.toArray(alimentos);
 		return alimentos;
@@ -66,5 +64,25 @@ public class Database {
 	public List<Combinacao> getCombinacoes() {
 		return combinacoes;
 	}
-
+	
+	public void printAlimentos() {
+		int i = 0;
+		for(var alimento : alimentos) {
+			System.out.println( i++ +". " + alimento);
+		}
+	}
+	
+	public void printCombinacoes() {
+		int i = 0;
+		for(var combinacao : combinacoes) {
+			System.out.println( i++ +". " + combinacao);
+		}
+	}
+	
+	public void printReceitas() {
+		int i = 0;
+		for(var receita : receitas) {
+			System.out.println( i++ +". " + receita + System.lineSeparator());
+		}
+	}
 }

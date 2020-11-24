@@ -28,7 +28,7 @@ public class CadastroReceita extends Cadastro<Receita> {
 	}
 	
 	private void lerModoPreparo() {
-		receitaBuilder.tempoPreparo(ctrl.lerString("Modo de preparo: "));
+		receitaBuilder.modoPreparo(ctrl.lerString("Modo de preparo: "));
 	}
 	
 	private Ingrediente[] getIngredientes() {
