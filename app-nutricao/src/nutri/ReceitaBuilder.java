@@ -42,5 +42,13 @@ public class ReceitaBuilder {
     ingredientes = new HashMap<Ingrediente, Integer>();
     return this;
   }
+  
+  public Receita obterReceita() {
+    receita.setIngredientes(ingredientes);
+    var receita_final = receita;
+    this.resetar();
+
+    return receita_final;
+  }
 
 }
