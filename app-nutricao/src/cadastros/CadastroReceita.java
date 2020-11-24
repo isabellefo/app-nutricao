@@ -55,7 +55,6 @@ public class CadastroReceita extends Cadastro<Receita> {
 			int q = ctrl.lerInt("Quantidade");
 			receitaBuilder.ingrediente(ingrediente, q);
 			ingrediente = escolherIngredientes();
-			q = ctrl.lerInt("Quantidade");
 		}
 		receitaBuilder.tempoPreparo(ctrl.lerString("Tempo de preparo: "));
 	}

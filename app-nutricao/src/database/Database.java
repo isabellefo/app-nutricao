@@ -20,7 +20,6 @@ public class Database {
 		this.combinacoes = new ArrayList<Combinacao>();
 	}
 	
-
 	public static Database getDatabase() {
 		if(db == null) {
 			db = new Database();
@@ -62,7 +61,6 @@ public class Database {
 		return res;
 	}
 	
-
 	public List<Receita> getReceitas() {
 		return receitas;
 	}
