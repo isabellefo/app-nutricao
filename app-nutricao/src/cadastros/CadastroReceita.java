@@ -49,14 +49,12 @@ public class CadastroReceita extends Cadastro<Receita> {
 	}
 	
 	private void lerIngredientes() {
-		
 		Ingrediente ingrediente = ctrl.lerOpcao("Ingrediente: ", getIngredientes());
 		while(ingrediente != null ) {
 			int q = ctrl.lerInt("Quantidade");
 			receitaBuilder.ingrediente(ingrediente, q);
 			ingrediente = escolherIngredientes();
 		}
-		receitaBuilder.tempoPreparo(ctrl.lerString("Tempo de preparo: "));
 	}
 	
 	@Override
